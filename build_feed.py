@@ -35,7 +35,7 @@ MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", 
 
 
 def page_id(url):
-    match = re.search(r"/shiurim/(wa[\w-]+)(?:[/?#]|$)", url, re.I)
+    match = re.search(r"/shiurim/([\w-]+)(?:[/?#]|$)", url, re.I)
     return match.group(1) if match else None
 
 
