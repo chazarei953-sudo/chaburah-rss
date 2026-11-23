@@ -48,6 +48,9 @@ jobs:
         with:
           path: public
 
+      - name: Wait for GitHub to register the upload
+        run: sleep 30
+
       - name: Publish podcast feed
         id: deployment
         uses: actions/deploy-pages@v4
