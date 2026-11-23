@@ -1,0 +1,38 @@
+CHABURAH — ONE COMBINED RSS PODCAST
+
+What this does:
+- Makes ONE feed from all the publicly listed shiurim at chaburah.org/shiurim.
+- Updates automatically four times a day.
+- Includes older shiurim, not only new ones.
+- Uses the site's audio files without uploading copies to your account.
+- Is intended for Podcast Addict.
+
+START HERE
+
+1. Create a free PUBLIC GitHub repository named: chaburah-rss
+   Make sure the default branch is main.
+
+2. Extract this ZIP. Upload the contents of the extracted folder to the
+   repository (keep subfolders; particularly .github/workflows/podcast.yml).
+   GitHub Desktop is an easy way to preserve the folder structure.
+   Detailed help is in README.md.
+
+3. Open GitHub repository -> Settings -> Pages.
+   Under Build and deployment, set Source to GitHub Actions.
+
+4. Open Actions -> Refresh Chaburah combined podcast RSS -> Run workflow.
+   The first manual run scans the entire library.
+
+5. When the workflow shows a green checkmark, your RSS feed should be at:
+   https://YOUR-GITHUB-USERNAME.github.io/chaburah-rss/feed.xml
+
+6. In Podcast Addict: + -> RSS feed -> paste URL -> subscribe.
+
+IMPORTANT: Live recording URLs could not be tested from this workspace. The
+script and sample RSS passed offline tests, but if the website requires special
+handling, the first GitHub run will reveal it. If that run fails, copy the
+'Build the combined podcast feed' step's log into this ChatGPT conversation
+so I can make a website-specific fix.
+
+The package is an unofficial personal listening feed, not an official Chaburah
+service. It does not upload or redistribute recordings.
